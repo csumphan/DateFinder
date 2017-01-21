@@ -1,6 +1,8 @@
 # Parser.py
 
-def get_results(json_text: 'json text') -> list:
+
+
+def get_locations(json_text: 'json text') -> list:
     location_list = []
     
     for predictions in range(len(json_text['predictions'])):
