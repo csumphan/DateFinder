@@ -1,7 +1,6 @@
 import urllib.request         # urllib.request.urlopen(url)
 import urllib.parse           # urllib.parse.urlencode((parameter, value))
 import json
-import Parser
 from pprint import pprint
 
 API_KEY = 'AIzaSyCQqP9yDRaKDriBcU0lYHxDJ6OW5esY7Yk'
@@ -23,12 +22,21 @@ def get_dict_from_json(url: str) -> dict:
     finally:
         if response != None:
             response.close()
+            
+def get_locations(json_text: 'json text') -> list:
+    location_list = []
+    
+    for predictions in range(len(json_text['predictions'])):
+        location_list.append(json_text['predictions'][predictions]['description'])
+        
+    return location_list  
+          
 
 #Test:
 print(build_autocom_url(TEST_INPUT))
 pprint(get_dict_from_json(build_autocom_url(TEST_INPUT)))
 print()
-print(Parser.get_locations(get_dict_from_json(build_autocom_url(TEST_INPUT))))
+print(get_locations(get_dict_from_json(build_autocom_url(TEST_INPUT))))
 
     
     
