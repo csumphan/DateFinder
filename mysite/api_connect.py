@@ -1,6 +1,7 @@
 import urllib.request         # urllib.request.urlopen(url)
 import urllib.parse           # urllib.parse.urlencode((parameter, value))
 import json
+import Parser
 from pprint import pprint
 
 API_KEY = 'AIzaSyCQqP9yDRaKDriBcU0lYHxDJ6OW5esY7Yk'
@@ -26,6 +27,8 @@ def get_dict_from_json(url: str) -> dict:
 #Test:
 print(build_autocom_url(TEST_INPUT))
 pprint(get_dict_from_json(build_autocom_url(TEST_INPUT)))
+print()
+print(Parser.get_locations(get_dict_from_json(build_autocom_url(TEST_INPUT))))
 
     
     
