@@ -125,14 +125,16 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="center-element">
-                        <div class="eventBox" style="background-image: url('{{ event6.EventImageURL}}')">
-                            <div class="eventBoxBanner">
-                                <p>
-                                    {{ event6.Title }} <br>
-                                    <span class="eventLocation">{{ event6.Address }}</span>
-                                </p>
+                        <a href="{{ event6.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event6.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        {{ event6.Title }} <br>
+                                        <span class="eventLocation">{{ event6.Address }}</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
