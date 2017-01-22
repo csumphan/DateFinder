@@ -31,6 +31,6 @@ def parse(json_text: 'json text') -> list:
     
 
 # Test
-test = parse(get_dict_from_json(build_url('concert', 'date', 'Irvine', '10mi', 'free')))
-for event in test:
-    print(event)
+# test = parse(get_dict_from_json(build_url('concert', 'date', 'Irvine', '10mi', 'free')))
+# for event in test:
+#     print(event)

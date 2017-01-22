@@ -1,0 +1,173 @@
+{% load static %}
+<html>
+    <head>
+        <title>MakeAPlan</title>
+        
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <meta name="title" content="Elton Xue" />
+        
+        <meta name="description" content="Elton Xue's Portfolio" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+        
+        <script src="{% static 'javascript/jquery-ui/jquery-ui.js' %}? {{ now }}"></script>
+        
+        <link href="{% static 'javascript/jquery-ui/jquery-ui.css' %}? {{ now }}" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}? {{ now }}" />
+        
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-light bg-faded">
+                    <ul class="nav navbar-nav float-xs-left" >
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" style="color: white; font-weight: bolder; margin-left: 15px">The time is {{ now }} </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav float-xs-right" >
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </div>
+        <!-- Second Page -->
+        <div class="secondPage">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="header">First, choose something to do!</h1>
+                </div>
+            </div>
+            <div class="row" style="padding: 0px 50px">
+                <div class="col-sm-4">
+                    <div class="center-element">
+                        <a href="{{ event1.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event1.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        <span style="opacity: 1; font-weight: bolder">
+                                            {{ event1.Title }}
+                                        </span>
+                                         <br>
+                                        <span class="eventLocation">{{ event1.Address }} | {{ event1.Date}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="center-element">
+                        <a href="{{ event2.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event2.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        {{ event2.Title }} <br>
+                                        <span class="eventLocation">{{ event2.Address }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="center-element">
+                        <a href="{{ event3.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event3.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        {{ event3.Title }} <br>
+                                        <span class="eventLocation">{{ event3.Address }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 0px 50px">
+                <div class="col-sm-4">
+                    <div class="center-element">
+                        <a href="{{ event4.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event4.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        {{ event4.Title }} <br>
+                                        <span class="eventLocation">{{ event4.Address }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="center-element">
+                        <a href="{{ event5.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event5.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        {{ event5.Title }} <br>
+                                        <span class="eventLocation">{{ event5.Address }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="center-element">
+                        <a href="{{ event6.EventURL}}">
+                            <div class="eventBox" style="background-image: url('{{ event6.EventImageURL}}')">
+                                <div class="eventBoxBanner">
+                                    <p>
+                                        {{ event6.Title }} <br>
+                                        <span class="eventLocation">{{ event6.Address }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            
+            function secondPage() {
+                $(".secondPage").animate({opacity: 1}, 500);
+                $(".secondPage").css("display", "block");
+            }
+            
+            secondPage();
+            
+            $(".eventBoxBanner").hover(function() {
+                $(this).animate({opacity: .9}, 50);
+            }, function() {
+                $(this).animate({opacity: .5}, 50);
+            })
+            
+            
+            
+        
+        
+        </script>
+    </body>
+</html>

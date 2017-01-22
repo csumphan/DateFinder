@@ -82,16 +82,19 @@
     box-shadow: 5px 5px 0px #888888;
     border: 2px solid black;
     margin: 10px;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .eventBoxBanner {
     position: absolute;
-    height: 70px;
+    height: 60px;
     width: 100%;
-    background-color: lightgrey;
+    background-color: deepskyblue;
     opacity: .5;
     bottom: 0;
-    font-size: 25px;
+    font-size: 20px;
     padding: 0px 10px;
     font-family: "Quicksand", sans-serif;
     color: black;
