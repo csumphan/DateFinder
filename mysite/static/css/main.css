@@ -1,0 +1,124 @@
+/* Main Section */
+#sectionMain {
+    min-height: 450px;
+}
+
+.firstPage {
+    padding-top: 90px;
+    opacity: 1;
+    display: block;
+}
+
+.secondPage {
+    display: none;
+    opacity: 0;
+}
+
+/* First Page */
+
+#bannerText {
+    font-size: 125px;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+}
+
+#searchBar { 
+    font-size: 25px;
+    width: 650px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid black;
+    font-family: "Quicksand", sans-serif;
+    padding: 5px 10px;
+    box-shadow: 0px 5px 2px #888888;
+    float: left;
+    height: 45px;
+}
+
+#searchButton {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0px 10px;
+    background-color: #4AC7FF;
+    border: 2px black solid;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 3px;
+    box-shadow: 5px 5px 2px #888888;
+    height: 45px;
+    width: 175px;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    left: 90%;
+}
+
+.wrapper {
+    position: relative;
+    width: 725px;
+    
+}
+
+/* Second Page */
+
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+.eventBox {
+    position: relative;
+    height: 200px;
+    width: 350px;
+    box-shadow: 5px 5px 0px #888888;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.eventBoxBanner {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background-color: lightgrey;
+    opacity: .5;
+    bottom: 0;
+    font-size: 25px;
+    padding: 0px 10px;
+    font-family: "Quicksand", sans-serif;
+    color: black;
+}
+
+.eventLocation {
+    font-size: 15px;
+    padding: 0px 1px;
+}
+
+
+/* About Us Section */
+
+#sectionAboutUs {
+    background-color: lightgrey;
+    height: 500px;
+}
+
+/* Bootstrap Classes */
+
+.navbar {
+    padding-right: 3%;
+    background-color: skyblue;
+}
+
+.nav-item {
+    font-size: 25px;
+    font-family: "Quicksand", sans-serif;
+    text-shadow: 5px 5px 5px #888888;
+}
+
+/* Helper */
+.center-element {
+  display: table;
+    margin: auto;
+}
