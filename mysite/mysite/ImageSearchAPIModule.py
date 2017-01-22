@@ -6,7 +6,7 @@ headers = {
     # Request headers
     'Ocp-Apim-Subscription-Key': 'c610f93b616647a393ecce4076c27db1',
 }
-def create_json(searchkey):
+def create_json_img(searchkey):
     params = urllib.parse.urlencode({
         # Request parameters
         'q': searchkey,
@@ -28,7 +28,7 @@ def create_json(searchkey):
         print("[Errno {0}] {1}".format(e.errno, e.strerror))
         
 
-def get_dict_from_json(str_json) -> dict:
+def get_dict_from_json_img(str_json) -> dict:
     response = None
     try:
         return json.loads(str_json)
@@ -36,7 +36,9 @@ def get_dict_from_json(str_json) -> dict:
         if response != None:
             response.close()
              
-def parse(json_text: 'json text'):   
+def parse_img(json_text: 'json text'):   
     return json_text['value'][0]['contentUrl']
+
+
 
 

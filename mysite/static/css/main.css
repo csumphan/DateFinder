@@ -1,17 +1,21 @@
 /* Main Section */
 #sectionMain {
-    min-height: 450px;
+    height: 100%;
+    background-color: #F7EAC8;
 }
 
 .firstPage {
     padding-top: 90px;
     opacity: 1;
     display: block;
+    background-color: #F7EAC8;
 }
 
 .secondPage {
+    height: 100%;
     display: none;
     opacity: 0;
+    background-color: #F7EAC8;
 }
 
 /* First Page */
@@ -80,7 +84,7 @@
     height: 200px;
     width: 350px;
     box-shadow: 5px 5px 0px #888888;
-    border: 2px solid black;
+    border: 1px solid black;
     margin: 10px;
     background-position: center;
     background-size: cover;
@@ -91,7 +95,7 @@
     position: absolute;
     height: 60px;
     width: 100%;
-    background-color: deepskyblue;
+    background-color: #4AC7FF;
     opacity: .5;
     bottom: 0;
     font-size: 20px;
@@ -109,7 +113,7 @@
 /* About Us Section */
 
 #sectionAboutUs {
-    background-color: lightgrey;
+    background-color: #DB3340;
     height: 500px;
 }
 
@@ -117,7 +121,7 @@
 
 .navbar {
     padding-right: 3%;
-    background-color: skyblue;
+    background-color: #1FDA9A;
 }
 
 .nav-item {
