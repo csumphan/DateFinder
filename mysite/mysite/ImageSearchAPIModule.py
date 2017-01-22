@@ -1,7 +1,7 @@
 
 ########### Python 3.2 #############
 import http.client, urllib.request, urllib.parse, urllib.error, base64, json
-
+DEFAULT_PIC_URL = 'https://goo.gl/omqmzT'
 headers = {
     # Request headers
     'Ocp-Apim-Subscription-Key': 'c610f93b616647a393ecce4076c27db1',
@@ -36,9 +36,11 @@ def get_dict_from_json_img(str_json) -> dict:
         if response != None:
             response.close()
              
-def parse_img(json_text: 'json text'):   
-    return json_text['value'][0]['contentUrl']
-
+def parse_img(json_text: 'json text'):
+    try:   
+        return json_text['value'][0]['contentUrl']
+    except:
+        return DEFAULT_PIC_URL
 
 
 
