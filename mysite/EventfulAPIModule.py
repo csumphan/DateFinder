@@ -28,7 +28,15 @@ def get_results(json_text: 'json text') -> []:
         if json_text['events']['event'][event]['image'] == None:
             result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'EventImageURL': None})
         else:
-            result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'EventImageURL': json_text['events']['event'][event]['image']['thumb']['url']})
+            result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'EventImageURL': json_text['events']['event'][event]['image']['medium']['url']})
+    
+    for result in range(len(result_list)):
+        if len(result_list[result]['Title']) >= 15:
+            new_title = ''
+            for letter in result_list[result]['Title']:
+                new_title += letter
+            new_title += '...'
+            result_list[result]['Title'] = new_title
         
     return result_list  
          
