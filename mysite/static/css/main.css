@@ -83,12 +83,12 @@
 
 .eventBoxBanner {
     position: absolute;
-    height: 70px;
+    height: 60px;
     width: 100%;
     background-color: lightgrey;
     opacity: .5;
     bottom: 0;
-    font-size: 25px;
+    font-size: 20px;
     padding: 0px 10px;
     font-family: "Quicksand", sans-serif;
     color: black;
