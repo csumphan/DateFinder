@@ -62,4 +62,4 @@ def get_results(json_text: 'json text') -> list:
          
 # Test
 # print(build_url('Los Angeles, CA'))   
-print(get_results(get_dict_from_json(build_url('Los Angeles, CA'))))
+# print(get_results(get_dict_from_json(build_url('Los Angeles, CA'))))
