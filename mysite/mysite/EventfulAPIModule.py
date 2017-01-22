@@ -56,6 +56,7 @@ def get_results(json_text: 'json text') -> list:
             new_date += 'pm'
         else:
             new_date += 'am'
+        result_list[result]['Date'] = new_date
         
     return result_list  
          
