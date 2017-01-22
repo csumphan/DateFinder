@@ -42,5 +42,5 @@ def get_results(json_text: 'json text') -> []:
          
          
 # Test
-print(build_url('Irvine, CA'))   
-print(get_results(get_dict_from_json(build_url('Irvine, CA'))))
+# print(build_url('Irvine, CA'))   
+# print(get_results(get_dict_from_json(build_url('Irvine, CA'))))

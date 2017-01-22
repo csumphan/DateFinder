@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="col-sm-11">
                         <div class="center-element wrapper">
-                            <form method="post">
+                            <form method="post" id="searchForm">
                                 {% csrf_token %} 
                                 <input type="text" id="searchBar" name="search" placeholder="Enter your location! (i.e. San Francisco, CA)">
                                 <button id="searchButton">Search!</button>
@@ -75,124 +75,11 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Second Page -->
-            <div class="secondPage">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h1 class="header">First, choose something to do!</h1>
-                    </div>
-                </div>
-                <div class="row" style="padding: 0px 50px">
-                    <div class="col-sm-4">
-                        <div class="center-element">
-                            <div class="eventBox">
-                                <div class="eventBoxBanner">
-                                    <p>
-                                        {{ event1.title }} <br>
-                                        <span class="eventLocation"> {{ event1.address }}</span>
-                                    </p>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="center-element">
-                            <div class="eventBox">
-                                <div class="eventBoxBanner">
-                                    <p>
-                                        {{ event2.title }} <br>
-                                        <span class="eventLocation">{{ event2.address }}</span>
-                                    </p>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="center-element">
-                            <div class="eventBox">
-                            <div class="eventBoxBanner">
-                                    <p>
-                                        {{ event3.title }} <br>
-                                        <span class="eventLocation">{{ event3.address }}</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 0px 50px">
-                    <div class="col-sm-4">
-                        <div class="center-element">
-                            <div class="eventBox">
-                                <div class="eventBoxBanner">
-                                    <p>
-                                        {{ event4.title }} <br>
-                                        <span class="eventLocation">{{ event4.address }}</span>
-                                    </p>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="center-element">
-                            <div class="eventBox">
-                                <div class="eventBoxBanner">
-                                    <p>
-                                        {{ event5.title }} <br>
-                                        <span class="eventLocation">{{ event5.address }}</span>
-                                    </p>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="center-element">
-                            <div class="eventBox">
-                                <div class="eventBoxBanner">
-                                    <p>
-                                        {{ event6.title }} <br>
-                                        <span class="eventLocation">{{ event6.address }}</span>
-                                    </p>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container-fluid" id="sectionAboutUs">
-            
         </div>
         
         
         <script type="text/javascript">
             
-            
-            function secondPage() {
-                $(".secondPage").animate({opacity: 1}, 500);
-                $(".secondPage").css("display", "block");
-            }
-                
-            
-            $("#searchButton").click(function() {
-                $("#sectionMain").animate({height: 550}, 1000);
-                
-                $(".firstPage").animate({opacity: 0}, 500);
-                
-                setTimeout(function() {
-                    $(".firstPage").css("display", "none");
-                    
-                    secondPage();
-                    
-                }, 500)
-            })
             
             $("#searchButton").hover(function() {
                 $("#searchButton").css("cursor", "hand");
@@ -200,10 +87,6 @@
             }, function() {
                 $("#searchButton").animate({width: 175}, 100);
             })
-            
-            
-            
-            
             
         
         
