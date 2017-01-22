@@ -56,10 +56,11 @@ def get_results(json_text: 'json text') -> list:
             new_date += 'pm'
         else:
             new_date += 'am'
+        result_list[result]['Date'] = new_date
         
     return result_list  
          
          
 # Test
 # print(build_url('Los Angeles, CA'))   
-print(get_results(get_dict_from_json(build_url('Los Angeles, CA'))))
+# print(get_results(get_dict_from_json(build_url('Los Angeles, CA'))))
