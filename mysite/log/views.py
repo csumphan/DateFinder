@@ -40,7 +40,7 @@ class UserFormView(View):
                     
                     login(request,user)
                     
-                    return redirect(':index')
+                    return redirect('main/')
                 
         return render(request, self.template_name, {'form': form})
             

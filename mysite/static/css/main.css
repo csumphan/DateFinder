@@ -22,6 +22,12 @@
     font-family: "Quicksand", sans-serif;
 }
 
+#topBannerText {
+    font-size: 55px;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+}
+
 #searchBar { 
     font-size: 25px;
     width: 650px;

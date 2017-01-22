@@ -1,11 +1,35 @@
 <!DOCTYPE>
+{% load static %}
 
 	<html lang='en'>
 	<head>
 		<meta charset="UTF-8">
 		<title>User Registration</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
 	</head>
 	<body>
+	<div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-light bg-faded">
+                    <ul class="nav navbar-nav float-xs-left" >
+                        <li class="nav-item active">
+                            
+                            <h1 id="topBannerText">Make<span style="color: #4AC7FF">A</span>Plan</h1>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav float-xs-right" >
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </div>
+        
 
 	 
 	 <form action="{% url 'register' %}" method="post">
@@ -13,7 +37,7 @@
     	<label for="username">Username: </label>
     	<input id="username" type="text" name="username" >
     	<label for="password">Password: </label>
-    	<input id="password" type="text" name="password" >
+    	<input id="password" type="password" name="password" >
     	<label for="email">Email: </label>
     	<input id="email" type="text" name="email" >
     	<input type="submit" value="OK">
