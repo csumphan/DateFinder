@@ -2,8 +2,6 @@ import urllib.request         # urllib.request.urlopen(url)
 import urllib.parse           # urllib.parse.urlencode((parameter, value))
 import json
 
-
-
 KEY = 'WcHjThBZW5Kmd66V'
 BASE_URL = 'http://api.eventful.com/json/events/search?'
 
@@ -21,7 +19,7 @@ def get_dict_from_json(url: str) -> dict:
         if response != None:
             response.close()
             
-def get_results(json_text: 'json text') -> []:
+def get_results(json_text: 'json text') -> list:
     result_list = []
     address_list = []
     
@@ -37,12 +35,16 @@ def get_results(json_text: 'json text') -> []:
                 address_list.append(json_text['events']['event'][event]['venue_address'])
     
     for result in range(len(result_list)):
-        if len(result_list[result]['Title']) >= 30:
+        if len(result_list[result]['Title']) >= 26:
             new_title = ''
-            for letter in range(30):
+            for letter in range(26):
                 new_title += result_list[result]['Title'][letter]
             new_title += '...'
             result_list[result]['Title'] = new_title
+            
+        # May 4, 2017 @ 8:00pm    2017-05-04 19:00:00
+        
+
         
     return result_list  
          
