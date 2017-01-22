@@ -26,14 +26,14 @@ def get_results(json_text: 'json text') -> []:
     
     for event in range(len(json_text['events']['event'])):
         if json_text['events']['event'][event]['image'] == None:
-            result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'EventImageURL': None})
+            result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'Date': json_text['events']['event'][event]['start_time'], 'EventImageURL': None})
         else:
-            result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'EventImageURL': json_text['events']['event'][event]['image']['medium']['url']})
+            result_list.append({'Title': json_text['events']['event'][event]['title'], 'Address': json_text['events']['event'][event]['venue_address'], 'EventURL': json_text['events']['event'][event]['url'], 'Date': json_text['events']['event'][event]['start_time'], 'EventImageURL': json_text['events']['event'][event]['image']['medium']['url']})
     
     for result in range(len(result_list)):
-        if len(result_list[result]['Title']) >= 15:
+        if len(result_list[result]['Title']) >= 20:
             new_title = ''
-            for letter in range(15):
+            for letter in range(20):
                 new_title += result_list[result]['Title'][letter]
             new_title += '...'
             result_list[result]['Title'] = new_title
