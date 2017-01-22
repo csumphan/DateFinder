@@ -13,17 +13,19 @@ auth = Oauth1Authenticator(
     token_secret=TOKEN_SECRET
 )
 
-client = Client(auth)
 
-params = {
-    'term': 'sushi',
-}
+def get_results(location: str, term: str) -> list:
+    results = []
+    client = Client(auth)
+    params = {'term': term}
+    
+    response = client.search(location, **params)
+    
+    for b in range(len(response.businesses)):
+        results.append({'name': response.businesses[b].name, 'address': response.businesses[b].location.display_address, 'rating': response.businesses[b].rating, 'image_url': response.businesses[b].image_url})
+
+    return results
 
 
 # Test
-response = client.search('Irvine', **params)
-
-for b in range(len(response.businesses)):
-    print(response.businesses[b].name)
-    print(response.businesses[b].location.address)
-    print()
+print(get_results('Irvine', 'sushi'))
