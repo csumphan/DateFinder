@@ -17,21 +17,9 @@ class Search(View):
             
         now = datetime.datetime.now()
         
-        self.event1 = {}
-        self.event2 = {}
-        self.event3 = {}
-        self.event4 = {}
-        self.event5 = {}
-        self.event6 = {}
         
         
-        return render(request, "main.html", Context({"now": now, 
-                                                     "event1": self.event1, 
-                                                     "event2": self.event2, 
-                                                     "event3": self.event3, 
-                                                     "event4": self.event4, 
-                                                     "event5": self.event5, 
-                                                     "event6": self.event6}))
+        return render(request, "main.html")
     
     def post(self, request):
         location = request.POST.get('search')
@@ -42,6 +30,7 @@ class Search(View):
         now = datetime.datetime.now()
         
         self.event1 = event_list[0]
+        
         self.event2 = event_list[1]
         self.event3 = event_list[2]
         self.event4 = event_list[3]
@@ -56,6 +45,3 @@ class Search(View):
                                                      "event5": self.event5, 
                                                      "event6": self.event6}))
     
-        
-
-
