@@ -4,6 +4,7 @@ import json
 
 KEY = 'WcHjThBZW5Kmd66V'
 BASE_URL = 'http://api.eventful.com/json/events/search?'
+MONTHS = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.']
 
 def build_url(location: str) -> str:
     
@@ -42,13 +43,23 @@ def get_results(json_text: 'json text') -> list:
             new_title += '...'
             result_list[result]['Title'] = new_title
             
-        # May 4, 2017 @ 8:00pm    2017-05-04 19:00:00
-        
-
+        new_date = ''
+        date_time = result_list[result]['Date'].split()
+        date = date_time[0].split('-')
+        time = date_time[1].split(':')
+        new_date += MONTHS[int(date[1])-1] + " " + date[2] + ', ' + date[0] + ' @ '
+        if int(time[0]) == 0:
+            new_date += str(12) + ':' + time[1]
+        else:    
+            new_date += str(int(time[0])%12) + ':' + time[1]
+        if int(time[0])//12 >= 1:
+            new_date += 'pm'
+        else:
+            new_date += 'am'
         
     return result_list  
          
          
 # Test
 # print(build_url('Los Angeles, CA'))   
-# print(get_results(get_dict_from_json(build_url('Los Angeles, CA'))))
+print(get_results(get_dict_from_json(build_url('Los Angeles, CA'))))
