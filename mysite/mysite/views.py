@@ -13,7 +13,6 @@ from django.views.generic import View
 
 
 class Search(View):
-    
     def get(self, request):
             
         now = datetime.datetime.now()
