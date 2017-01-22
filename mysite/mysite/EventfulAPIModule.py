@@ -33,8 +33,8 @@ def get_results(json_text: 'json text') -> []:
     for result in range(len(result_list)):
         if len(result_list[result]['Title']) >= 15:
             new_title = ''
-            for letter in result_list[result]['Title']:
-                new_title += letter
+            for letter in range(15):
+                new_title += result_list[result]['Title'][letter]
             new_title += '...'
             result_list[result]['Title'] = new_title
         
