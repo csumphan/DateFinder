@@ -1,7 +1,7 @@
 import urllib.request         # urllib.request.urlopen(url)
 import urllib.parse           # urllib.parse.urlencode((parameter, value))
 import json
-from pprint import pprint
+
 
 TOKEN = '77GNIJFPL3PU4ASPFJV5'
 BASE_URL = 'https://www.eventbriteapi.com/v3/events/search/?'
