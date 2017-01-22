@@ -20,7 +20,7 @@ class Search(View):
         
         
         
-        return render(request, "main.html")
+        return render(request, "main.html", Context({"now": now}))
     
     def post(self, request):
         location = request.POST.get('search')
@@ -29,6 +29,8 @@ class Search(View):
         event_list = get_results(event_dict)
         
         now = datetime.datetime.now()
+        
+        
         
         self.event1 = event_list[0]
         self.event2 = event_list[1]
