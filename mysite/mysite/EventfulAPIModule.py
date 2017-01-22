@@ -8,7 +8,7 @@ MONTHS = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sept.'
 
 def build_url(location: str) -> str:
     
-    parameters = urllib.parse.urlencode([('app_key', KEY), ('location', location)])
+    parameters = urllib.parse.urlencode([('app_key', KEY), ('location', location), ('within', 50)])
     return BASE_URL + parameters
 
 def get_dict_from_json(url: str) -> dict:
