@@ -37,9 +37,9 @@ def get_results(json_text: 'json text') -> []:
                 address_list.append(json_text['events']['event'][event]['venue_address'])
     
     for result in range(len(result_list)):
-        if len(result_list[result]['Title']) >= 20:
+        if len(result_list[result]['Title']) >= 30:
             new_title = ''
-            for letter in range(20):
+            for letter in range(30):
                 new_title += result_list[result]['Title'][letter]
             new_title += '...'
             result_list[result]['Title'] = new_title
