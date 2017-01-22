@@ -96,7 +96,7 @@
     height: 60px;
     width: 100%;
     background-color: #4AC7FF;
-    opacity: .5;
+    opacity: .7;
     bottom: 0;
     font-size: 20px;
     padding: 0px 10px;
@@ -105,7 +105,7 @@
 }
 
 .eventLocation {
-    font-size: 15px;
+    font-size: 12px;
     padding: 0px 1px;
 }
 
